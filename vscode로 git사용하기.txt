@@ -157,9 +157,11 @@ git clone https://원격_저장소 주소
 
 git clone 원격저장소_주소 //원격_저장소에 있던 파일들을 가져옵니다.
 
+----------------------------
 팀원이 git push를 하려면 github/acess 세팅에서
 Collaborators에 팀원 깃헙아이디를 등록해놔야
 git push를 사용가능하다.
+----------------------------
 
 (단, 원격 != 로컬 내용 이면 에러남 - 예방차원의 rejected)
 ==원격저장소에 새로운게 생겼다면 git push 못 함.
@@ -170,4 +172,22 @@ git push를 사용가능하다.
 git pull (원격저장소_주소) (원격_브랜치명) //원격저장소 -> 로컬저장소
 ==> git push 할 때 -u를 잘 써놨다면
 git pull만 해도 작동된다.
+
+git pull 할 때 브랜치 명시 가능
+git pull origin 브랜치명 //특정 브랜치만 가져오기 가능, 
+//origin은 원격_저장소 주소명을 저장한 변수
+
+
+git pull 명령어는 git fetch + git merge 축약어임 
+(때문에 merge conflict도 발생 가능)
+
+fetch는 원격 저장소에 있는 커밋 중에 로컬에 없는 신규 커밋을 가져오라는 뜻
+merge는 그걸 merge하라는 뜻
+합쳐서 git pull로 쓸 수 있따.
+
+
+
+
+
+================브랜치로 협업================
 
