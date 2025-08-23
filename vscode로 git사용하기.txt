@@ -118,8 +118,30 @@ git reset --mixed 커밋아이디 //Add도 안된 상태로 돌아갑니다.
 //add, commit 다시 진행 가능
 
 
-------------------------------
+------------------------------(Github에 만든 원격-온라인 저장소 사용)_
 github.com은 이제 기본 브랜치 이름을 master가 아니라 main으로 사용하라고 강요합니다.
 
 그래서 우리 로컬 작업폴더에 있는 기본 브랜치 이름도 main으로 변경해줍니다.
 git branch -M main //기본 브랜치 이름 변경
+
+git push -u 원격저장소 현재브랜치명 //로컬저장소 -> 원격저장소
+//-u 옵션은 방금 입력한 주소를 기억해두라는 뜻입니다.
+//한 번 사용하면 다음부터는 git push만 입력해도 됩니다.
+
+
+(원격_저장소 주소 길게 입력하는게 귀찮으면)
+git remote add 변수명 저장소주소 
+//주소가 필요할 때마다 origin이라는 변수명을 사용가능
+
+ex) git remote add origin hhttps://github.com/JellyOperator/git-lesson.git
+이렇게 적어놓으면, 다음번엔
+git push -u origin main으로 짧게 사용가능
+
+//이렇게 지정한 변수 목록 보기 => git remote -v
+
+
+(원격_저장소 있던거 그대로 내려받기)
+git clone https://원격_저장소 주소
+
+
+-------------저장소에 올리기 싫은 파일은 .gitignore를 이용-------------
