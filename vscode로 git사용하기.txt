@@ -222,4 +222,18 @@ Q. merge 할 때 어떤 방법 쓰는게 좋은가요?
 
 ========마지막 git stash로 코드 잠깐 보관하기========
 
+git stash //임시 삭제
+git stash save "코드 짰는데 수정 필요" //메모를 남길 수 있음
+git stash list //git stash는 여러번 가능 -> 목록 확인 가능
 
+git stash pop //최근에 보관했던 코드부터 먼저 불러옴
+//conflict나면 알아서 해결
+
+git stash drop 삭제할id //특정 stash 삭제 (id는 0, 1, 2~~)
+git stash clear //전체 stash 삭제
+
+git stash -p //전체 말고 일부 코드만 git stash
+//y / n으로 잘 대답
+
+(주석은 commit에 남지만 stash는 남지 않기 때문에 유용)
+(stash대신 branch를 만들어서 보관해도 무방)
