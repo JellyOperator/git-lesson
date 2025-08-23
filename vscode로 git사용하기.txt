@@ -133,9 +133,15 @@ git push -u 원격저장소 현재브랜치명 //로컬저장소 -> 원격저장
 git remote add 변수명 저장소주소 
 //주소가 필요할 때마다 origin이라는 변수명을 사용가능
 
-ex) git remote add origin hhttps://github.com/JellyOperator/git-lesson.git
+ex) git remote add origin https://github.com/JellyOperator/git-lesson.git
 이렇게 적어놓으면, 다음번엔
-git push -u origin main으로 짧게 사용가능
+git push origin main으로 짧게 사용가능
+
++추가로
+git push -u origin main을 사용했다면 //-u 기억하기
+
+담번엔 
+git push만 해도 된다.
 
 //이렇게 지정한 변수 목록 보기 => git remote -v
 
@@ -145,3 +151,23 @@ git clone https://원격_저장소 주소
 
 
 -------------저장소에 올리기 싫은 파일은 .gitignore를 이용-------------
+
+
+(타인과 협업!)
+
+git clone 원격저장소_주소 //원격_저장소에 있던 파일들을 가져옵니다.
+
+팀원이 git push를 하려면 github/acess 세팅에서
+Collaborators에 팀원 깃헙아이디를 등록해놔야
+git push를 사용가능하다.
+
+(단, 원격 != 로컬 내용 이면 에러남 - 예방차원의 rejected)
+==원격저장소에 새로운게 생겼다면 git push 못 함.
+
+에러가 낫다면 원격저장소에 있던 모든 브런치 내용을 가져와서 
+로컬저장소에 합치라는 뜻입니다.
+
+git pull (원격저장소_주소) (원격_브랜치명) //원격저장소 -> 로컬저장소
+==> git push 할 때 -u를 잘 써놨다면
+git pull만 해도 작동된다.
+
